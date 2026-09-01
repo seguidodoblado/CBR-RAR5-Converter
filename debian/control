@@ -1,0 +1,12 @@
+Source: cbr-rar5-converter
+Section: graphics
+Priority: optional
+Maintainer: CBR RAR5 Converter <localhost>
+Standards-Version: 4.6.0
+Build-Depends: debhelper-compat (= 13)
+
+Package: cbr-rar5-converter
+Architecture: all
+Depends: ${misc:Depends}, python3, python3-gi, gir1.2-gtk-4.0
+Description: Conversor seguro de archivos CBR RAR4 a RAR5
+ Aplicación GTK para detectar y preparar conversiones sin modificar originales.

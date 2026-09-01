@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cbr-rar5-converter"
+version = "0.1.0"
+description = "Preparación segura de cómics CBR RAR4 para RAR5"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+[project.optional-dependencies]
+gui = ["PyGObject>=3.42"]
+dev = ["pytest>=7", "ruff>=0.6"]
+[project.scripts]
+cbr-rar5-converter = "cbr_rar5_converter.__main__:main"
+[tool.setuptools.packages.find]
+include = ["cbr_rar5_converter*"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+[tool.ruff]
+line-length = 100
+target-version = "py310"
