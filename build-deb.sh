@@ -12,6 +12,7 @@ find "$stage/usr/share/cbr-rar5-converter" -type d -name __pycache__ -prune -exe
 cp "$base/debian/cbr-rar5-converter-launcher" "$stage/usr/bin/cbr-rar5-converter"
 cp "$base/debian/cbr-rar5-converter.desktop" "$stage/usr/share/applications/"
 cp "$base/cbr-rar5-converter.svg" "$stage/usr/share/icons/hicolor/scalable/apps/"
+cp "$base/debian/postinst" "$stage/DEBIAN/postinst"
 cat > "$stage/DEBIAN/control" <<EOF
 Package: cbr-rar5-converter
 Version: ${version}-1
@@ -24,5 +25,6 @@ Description: Conversor seguro de archivos CBR RAR4 a RAR5
  Aplicación GTK para detectar y preparar conversiones sin modificar originales.
 EOF
 chmod 755 "$stage/usr/bin/cbr-rar5-converter"
+chmod 755 "$stage/DEBIAN/postinst"
 dpkg-deb --build --root-owner-group "$stage" "$package"
 echo "Paquete generado: $package"

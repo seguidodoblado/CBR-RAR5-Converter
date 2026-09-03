@@ -42,3 +42,11 @@ sudo apt install ../cbr-rar5-converter_0.1.0_all.deb
 ```
 
 El paquete depende de `python3-gi` y `gir1.2-gtk-4.0`, que se instalan automáticamente mediante APT.
+
+Si el icono no aparece tras actualizar una instalación anterior, reinstala el paquete para ejecutar el refresco de caché:
+
+```bash
+sudo apt install --reinstall ../cbr-rar5-converter_0.1.0_all.deb
+```
+
+La entrada de escritorio incluye `StartupWMClass` coincidente con el identificador GTK de la aplicación para que el panel del sistema no la agrupe como `python3`.

@@ -1,3 +1,3 @@
-#!/bin/sh
+#!/bin/bash
 export PYTHONPATH=/usr/share/cbr-rar5-converter
-exec python3 -m cbr_rar5_converter "$@"
+exec -a cbr-rar5-converter python3 -m cbr_rar5_converter "$@"

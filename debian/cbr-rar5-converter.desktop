@@ -3,6 +3,7 @@ Name=CBR RAR5 Converter
 Comment=Preparar conversiones seguras de archivos CBR
 Exec=/usr/bin/cbr-rar5-converter
 Icon=cbr-rar5-converter
+StartupWMClass=cbr-rar5-converter
 Type=Application
 Categories=Graphics;Utility;
 Terminal=false
