@@ -33,7 +33,7 @@ Ejecuta `pytest` para las pruebas unitarias y `ruff check .` para estilo. En est
 
 ## Construir e instalar el paquete DEB
 
-El flujo sigue el patrón de `joseflix-request` y `telegraph-writer`: empaquetado directo con `dpkg-deb`, lanzador en `/usr/bin`, aplicación en `/usr/share`, icono SVG y entrada de menú.
+El flujo sigue el patrón de `joseflix-request` y `telegraph-writer`: empaquetado directo con `dpkg-deb`, aplicación e icono fuente en `/opt/cbr-rar5-converter`, lanzador en `/usr/bin`, icono registrado en `hicolor` y entrada de menú/panel.
 
 ```bash
 chmod +x build-deb.sh
