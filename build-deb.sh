@@ -21,9 +21,10 @@ Section: graphics
 Priority: optional
 Architecture: all
 Depends: python3, python3-gi, gir1.2-gtk-4.0
+Recommends: rar
 Maintainer: CBR RAR5 Converter <localhost>
 Description: Conversor seguro de archivos CBR RAR4 a RAR5
- Aplicación GTK para detectar y preparar conversiones sin modificar originales.
+ Aplicación GTK para detectar y convertir archivos RAR4 a RAR5 sin modificar los originales.
 EOF
 chmod 755 "$stage/usr/bin/cbr-rar5-converter"
 chmod 755 "$stage/DEBIAN/postinst"

@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cbr-rar5-converter"
-version = "0.1.0"
-description = "Preparación segura de cómics CBR RAR4 para RAR5"
+version = "0.1.1"
+description = "Conversión segura de cómics CBR RAR4 a RAR5"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []

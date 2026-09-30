@@ -8,5 +8,6 @@ Build-Depends: debhelper-compat (= 13)
 Package: cbr-rar5-converter
 Architecture: all
 Depends: ${misc:Depends}, python3, python3-gi, gir1.2-gtk-4.0
+Recommends: rar
 Description: Conversor seguro de archivos CBR RAR4 a RAR5
- Aplicación GTK para detectar y preparar conversiones sin modificar originales.
+ Aplicación GTK para detectar y convertir archivos RAR4 a RAR5 sin modificar los originales.
