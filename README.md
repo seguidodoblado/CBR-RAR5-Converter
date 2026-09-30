@@ -1,8 +1,16 @@
+<p align="center">
+  <img src="cbr-rar5-converter.svg" alt="Logotipo de CBR RAR5 Converter" width="128">
+</p>
+
 <h1 align="center">CBR RAR5 Converter</h1>
 
 <p align="center">
   Convierte de forma segura archivos <code>.cbr</code> en formato RAR4 al formato RAR5, sin modificar los
   originales.
+</p>
+
+<p align="center">
+  <img src="docs/screenshot.png" alt="Captura de CBR RAR5 Converter">
 </p>
 
 Aplicación de escritorio (GTK 4 + PyGObject, interfaz en español), de uso personal: sin servidor ni cuenta,
