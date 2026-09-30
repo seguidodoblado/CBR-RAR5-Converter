@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased]
+
+## [0.1.2] - 2026-09-30
+
+### Cambiado
+- Desarrollo sin `venv`/`pip install`, sin ofrecer `pip` como alternativa, alineado con el flujo de `joseflix-request`, `telegraph-writer` y `comic-identify`. Se eliminan de `pyproject.toml` los extras `dev`/`gui` y la configuración de `ruff` (no empaquetado en Ubuntu/Mint), que quedaban ligados a ese flujo con pip.
+- README: se elimina la sección separada "Instalación y ejecución en desarrollo"; la instalación y ejecución quedan cubiertas por "Construir e instalar el paquete DEB" (el usuario no teclea `python3` en ningún momento), y `python3 -m pytest` queda solo en "Comprobaciones" para quien desarrolle el núcleo.
+
 ## [0.1.1] - 2026-09-30
 
 ### Añadido
