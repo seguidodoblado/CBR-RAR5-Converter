@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Cambiado
+- Documentación reestructurada siguiendo la plantilla bilingüe (es/en) de `comic-identify`: la wiki del
+  repositorio pasa a tener Home, `_Sidebar` y 9 páginas por idioma (descripción, interfaz, especificaciones
+  técnicas, instalación, guía de uso, estructura de archivos, solución de problemas, glosario e historial de
+  versiones), y el README se reduce a una presentación breve que enlaza a la wiki como documentación completa.
+
 ## [0.1.2] - 2026-09-30
 
 ### Cambiado
