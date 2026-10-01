@@ -6,8 +6,7 @@
 
 <h1 align="center">CBR RAR5 Converter</h1>
 
-<p align="center">![release](https://img.shields.io/github/v/release/seguidodoblado/CBR-RAR5-Converter) ![license](https://img.shields.io/github/license/seguidodoblado/CBR-RAR5-Converter)
-</p>
+![release](https://img.shields.io/github/v/release/seguidodoblado/CBR-RAR5-Converter) ![license](https://img.shields.io/github/license/seguidodoblado/CBR-RAR5-Converter)
 
 <p align="center">
   Convierte de forma segura archivos <code>.cbr</code> en formato RAR4 al formato RAR5, sin modificar los
