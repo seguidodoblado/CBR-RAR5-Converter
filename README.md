@@ -1,3 +1,5 @@
+<p align="right"><a href="README.en.md">🇺🇸 English</a></p>
+
 <p align="center">
   <img src="cbr-rar5-converter.svg" alt="Logotipo de CBR RAR5 Converter" width="128">
 </p>
