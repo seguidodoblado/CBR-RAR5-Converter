@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [0.1.4] - 2026-10-01
+
+### Añadido
+- `README.en.md`: versión en inglés del README, con enlace de cambio de idioma en ambos.
+- Archivos de comunidad: `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md` y plantilla de Pull Request (`.github/PULL_REQUEST_TEMPLATE.md`), con el mismo contenido que en `comic-identify`.
+- Logotipo y captura de pantalla en el README.
+
 ## [0.1.3] - 2026-09-30
 
 ### Cambiado
