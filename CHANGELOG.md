@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-10-05
+
 ### Añadido
 - **Interfaz en español e inglés** (`gettext`): el español es el idioma fuente y el inglés está en `po/en.po`. Se elige en el nuevo menú de la cabecera → **Preferencias** (Sistema, Español o English; reinicia la aplicación). Con «Sistema» se usa el idioma del escritorio o `$LANGUAGE`
 - Menú de la cabecera con **Preferencias** y **Acerca de** (ventana estándar de GNOME: licencia GPL-3.0 o posterior predefinida de GTK, autor con enlace al correo y créditos de traducción)
