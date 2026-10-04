@@ -50,4 +50,4 @@ CBR RAR5 Converter no tiene servidor ni cuenta propios, no se conecta a Internet
 
 ## Licencia
 
-Este proyecto se distribuye bajo la GNU General Public License, versión 3 (ver `LICENSE`).
+Este proyecto se distribuye bajo la GNU General Public License, versión 3 o posterior (ver `LICENSE`).

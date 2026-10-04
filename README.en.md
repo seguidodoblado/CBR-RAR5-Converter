@@ -48,4 +48,4 @@ CBR RAR5 Converter has no server or account of its own, does not connect to the 
 
 ## License
 
-This project is distributed under the GNU General Public License, version 3 (see `LICENSE`).
+This project is distributed under the GNU General Public License, version 3 or later (see `LICENSE`).

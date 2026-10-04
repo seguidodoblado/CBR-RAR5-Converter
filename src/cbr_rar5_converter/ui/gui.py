@@ -110,7 +110,7 @@ def run_gui() -> None:
                            "sin modificar los originales."),
                 website=REPO_URL, website_label=REPO_URL.removeprefix("https://"),
                 authors=[f"{AUTHOR} <{AUTHOR_EMAIL}>"], copyright=f"© 2026 {AUTHOR}",
-                license_type=Gtk.License.GPL_3_0_ONLY, translator_credits=_("translator-credits"))
+                license_type=Gtk.License.GPL_3_0, translator_credits=_("translator-credits"))
             about.present()
 
         @staticmethod
