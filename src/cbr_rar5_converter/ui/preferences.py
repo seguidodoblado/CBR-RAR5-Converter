@@ -1,4 +1,4 @@
-"""Ventana de Preferencias: idioma, guardado en ~/.config/cbr-rar5-converter/settings.json."""
+"""Ventana de Preferencias: idioma y tema, guardados en ~/.config/cbr-rar5-converter/settings.json."""
 import subprocess
 
 import gi
@@ -12,6 +12,7 @@ from ..i18n import _
 # Los nombres de idioma no se traducen (convención habitual en selectores de idioma):
 # «English» se ve igual con la app en español, y viceversa.
 LANGUAGE_CODES: list[str | None] = [None, "es", "en"]
+THEME_VALUES: list[bool | None] = [None, False, True]   # Sistema, Claro, Oscuro (valor de dark_mode)
 
 
 def language_labels() -> list[str]:
@@ -19,7 +20,8 @@ def language_labels() -> list[str]:
 
 
 class PreferencesWindow(Gtk.Window):
-    """El idioma se aplica reiniciando la aplicación: los textos ya están fijados en los widgets."""
+    """Idioma y tema se aplican reiniciando la aplicación: los textos ya están fijados en los widgets y, en
+    Cinnamon/Mint, cambiar gtk-theme-name en caliente no repinta la ventana."""
 
     def __init__(self, application: Gtk.Application, busy: bool) -> None:
         super().__init__(title=_("Preferencias"), transient_for=application.props.active_window,
@@ -35,6 +37,11 @@ class PreferencesWindow(Gtk.Window):
         self._language.set_selected(LANGUAGE_CODES.index(current))
         box.append(self._language)
 
+        box.append(Gtk.Label(label=_("Tema"), xalign=0))
+        self._theme = Gtk.DropDown.new_from_strings([_("Sistema"), _("Claro"), _("Oscuro")])
+        self._theme.set_selected(THEME_VALUES.index(settings.dark_mode()))
+        box.append(self._theme)
+
         hint = Gtk.Label(label=_("Los cambios se aplican reiniciando la aplicación."), xalign=0, wrap=True)
         hint.add_css_class("dim-label")
         box.append(hint)
@@ -46,11 +53,12 @@ class PreferencesWindow(Gtk.Window):
         if busy:
             # Reiniciar interrumpiría la conversión en curso
             apply_button.set_sensitive(False)
-            hint.set_text(_("Hay una conversión en marcha: espera a que termine para cambiar el idioma."))
+            hint.set_text(_("Hay una conversión en marcha: espera a que termine para cambiar el idioma o el tema."))
 
     def _on_apply(self, _button: Gtk.Button) -> None:
         config = settings.read_settings()
         config["language"] = LANGUAGE_CODES[self._language.get_selected()]
+        config["dark_mode"] = THEME_VALUES[self._theme.get_selected()]
         settings.write_settings(config)
         # Un exec en el sitio conservaría los descriptores abiertos (y con ellos el registro D-Bus de
         # esta instancia): el proceso nuevo se vería como secundario y se cerraría sin ventana. Se

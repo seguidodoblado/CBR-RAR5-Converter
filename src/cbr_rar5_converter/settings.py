@@ -1,4 +1,4 @@
-"""Ajustes del usuario (por ahora, solo el idioma), en ~/.config/cbr-rar5-converter/settings.json."""
+"""Ajustes del usuario (idioma y tema), en ~/.config/cbr-rar5-converter/settings.json."""
 from __future__ import annotations
 
 import json
@@ -22,6 +22,12 @@ def read_settings(path: Path = SETTINGS_PATH) -> dict[str, Any]:
 def write_settings(settings: dict[str, Any], path: Path = SETTINGS_PATH) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(settings, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def dark_mode(path: Path = SETTINGS_PATH) -> bool | None:
+    """El tema elegido (True oscuro, False claro), o None para seguir el del sistema."""
+    value = read_settings(path).get("dark_mode")
+    return value if isinstance(value, bool) else None
 
 
 def language(path: Path = SETTINGS_PATH) -> str | None:

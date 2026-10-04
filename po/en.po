@@ -7,9 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cbr-rar5-converter 0.1.4\n"
 "Report-Msgid-Bugs-To: jose.antonio.seguido@gmail.com\n"
-"POT-Creation-Date: 2026-10-05 01:00+0200\n"
+"POT-Creation-Date: 2026-10-05 01:22+0200\n"
 "PO-Revision-Date: 2026-10-05 01:00+0200\n"
-"Last-Translator: José Antonio Seguido Doblado <jose.antonio.seguido@gmail.com>\n"
+"Last-Translator: José Antonio Seguido Doblado <jose.antonio.seguido@gmail."
+"com>\n"
 "Language-Team: none\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
@@ -74,128 +75,148 @@ msgstr "Error"
 msgid "Solo se convierten archivos RAR4."
 msgstr "Only RAR4 files are converted."
 
-#: src/cbr_rar5_converter/ui/gui.py:20
+#: src/cbr_rar5_converter/ui/gui.py:21
 #, python-brace-format
 msgid ""
 "Archivo: {path} | Formato: {format} | Estado: {status} | Destino: "
 "{destination}"
-msgstr "File: {path} | Format: {format} | Status: {status} | Destination: {destination}"
+msgstr ""
+"File: {path} | Format: {format} | Status: {status} | Destination: "
+"{destination}"
 
-#: src/cbr_rar5_converter/ui/gui.py:30
+#: src/cbr_rar5_converter/ui/gui.py:31
 msgid "GTK 4/PyGObject no está instalado."
 msgstr "GTK 4/PyGObject is not installed."
 
-#: src/cbr_rar5_converter/ui/gui.py:49
+#: src/cbr_rar5_converter/ui/gui.py:65
 msgid "Añadir archivos"
 msgstr "Add files"
 
-#: src/cbr_rar5_converter/ui/gui.py:50
+#: src/cbr_rar5_converter/ui/gui.py:66
 msgid "Añadir carpeta"
 msgstr "Add folder"
 
-#: src/cbr_rar5_converter/ui/gui.py:51
+#: src/cbr_rar5_converter/ui/gui.py:67
 msgid "Buscar subcarpetas"
 msgstr "Search subfolders"
 
-#: src/cbr_rar5_converter/ui/gui.py:52
+#: src/cbr_rar5_converter/ui/gui.py:68
 msgid "Preparar / iniciar"
 msgstr "Prepare / start"
 
-#: src/cbr_rar5_converter/ui/gui.py:54
+#: src/cbr_rar5_converter/ui/gui.py:70
 msgid "Añade uno o varios archivos CBR, o una carpeta completa."
 msgstr "Add one or more CBR files, or a whole folder."
 
-#: src/cbr_rar5_converter/ui/gui.py:60
+#: src/cbr_rar5_converter/ui/gui.py:76
 msgid "Archivo actual"
 msgstr "Current file"
 
-#: src/cbr_rar5_converter/ui/gui.py:61
+#: src/cbr_rar5_converter/ui/gui.py:77
 msgid "Progreso del lote"
 msgstr "Batch progress"
 
-#: src/cbr_rar5_converter/ui/gui.py:86
-#: src/cbr_rar5_converter/ui/preferences.py:25
+#: src/cbr_rar5_converter/ui/gui.py:102
+#: src/cbr_rar5_converter/ui/preferences.py:27
 msgid "Preferencias"
 msgstr "Preferences"
 
-#: src/cbr_rar5_converter/ui/gui.py:87
+#: src/cbr_rar5_converter/ui/gui.py:103
 msgid "Acerca de CBR RAR5 Converter"
 msgstr "About CBR RAR5 Converter"
 
-#: src/cbr_rar5_converter/ui/gui.py:97
+#: src/cbr_rar5_converter/ui/gui.py:109
 msgid "Menú principal"
 msgstr "Main menu"
 
-#: src/cbr_rar5_converter/ui/gui.py:109
+#: src/cbr_rar5_converter/ui/gui.py:121
 msgid ""
 "Convierte de forma segura archivos CBR en formato RAR4 al formato RAR5, sin "
 "modificar los originales."
-msgstr "Safely converts CBR files in RAR4 format to RAR5, without modifying the originals."
+msgstr ""
+"Safely converts CBR files in RAR4 format to RAR5, without modifying the "
+"originals."
 
-#: src/cbr_rar5_converter/ui/gui.py:113
+#: src/cbr_rar5_converter/ui/gui.py:125
 msgid "translator-credits"
 msgstr "José Antonio Seguido Doblado <jose.antonio.seguido@gmail.com>"
 
-#: src/cbr_rar5_converter/ui/gui.py:118
+#: src/cbr_rar5_converter/ui/gui.py:130
 msgid "Seleccionar archivos CBR"
 msgstr "Select CBR files"
 
-#: src/cbr_rar5_converter/ui/gui.py:128 src/cbr_rar5_converter/ui/gui.py:138
+#: src/cbr_rar5_converter/ui/gui.py:140 src/cbr_rar5_converter/ui/gui.py:150
 #, python-brace-format
 msgid "Selección cancelada o fallida: {error}"
 msgstr "Selection cancelled or failed: {error}"
 
-#: src/cbr_rar5_converter/ui/gui.py:155
+#: src/cbr_rar5_converter/ui/gui.py:167
 msgid "No hay archivos RAR4 preparados para convertir."
 msgstr "There are no RAR4 files ready to convert."
 
-#: src/cbr_rar5_converter/ui/gui.py:158
+#: src/cbr_rar5_converter/ui/gui.py:170
 #, python-brace-format
 msgid "Iniciando lote de {count} archivo(s)…"
 msgstr "Starting a batch of {count} file(s)…"
 
-#: src/cbr_rar5_converter/ui/gui.py:168
+#: src/cbr_rar5_converter/ui/gui.py:180
 #, python-brace-format
 msgid "Archivo {index}/{total}: {value}%"
 msgstr "File {index}/{total}: {value}%"
 
-#: src/cbr_rar5_converter/ui/gui.py:184
+#: src/cbr_rar5_converter/ui/gui.py:196
 msgid "Lote finalizado."
 msgstr "Batch finished."
 
-#: src/cbr_rar5_converter/ui/gui.py:191
+#: src/cbr_rar5_converter/ui/gui.py:203
 #, python-brace-format
 msgid "; {added} añadido(s) en esta selección"
 msgstr "; {added} added in this selection"
 
-#: src/cbr_rar5_converter/ui/gui.py:192
+#: src/cbr_rar5_converter/ui/gui.py:204
 #, python-brace-format
 msgid ""
 "{total} archivo(s) en la lista: {ready} preparado(s), {skipped} omitido(s)"
 msgstr "{total} file(s) in the list: {ready} ready, {skipped} skipped"
 
-#: src/cbr_rar5_converter/ui/gui.py:195
+#: src/cbr_rar5_converter/ui/gui.py:207
 #, python-brace-format
 msgid ", {errors} con error"
 msgstr ", {errors} with errors"
 
-#: src/cbr_rar5_converter/ui/preferences.py:18
+#: src/cbr_rar5_converter/ui/preferences.py:19
+#: src/cbr_rar5_converter/ui/preferences.py:41
 msgid "Sistema"
 msgstr "System"
 
-#: src/cbr_rar5_converter/ui/preferences.py:32
+#: src/cbr_rar5_converter/ui/preferences.py:34
 msgid "Idioma"
 msgstr "Language"
 
-#: src/cbr_rar5_converter/ui/preferences.py:38
+#: src/cbr_rar5_converter/ui/preferences.py:40
+msgid "Tema"
+msgstr "Theme"
+
+#: src/cbr_rar5_converter/ui/preferences.py:41
+msgid "Claro"
+msgstr "Light"
+
+#: src/cbr_rar5_converter/ui/preferences.py:41
+msgid "Oscuro"
+msgstr "Dark"
+
+#: src/cbr_rar5_converter/ui/preferences.py:45
 msgid "Los cambios se aplican reiniciando la aplicación."
 msgstr "Changes are applied by restarting the application."
 
-#: src/cbr_rar5_converter/ui/preferences.py:42
+#: src/cbr_rar5_converter/ui/preferences.py:49
 msgid "Aplicar y reiniciar"
 msgstr "Apply and restart"
 
-#: src/cbr_rar5_converter/ui/preferences.py:49
+#: src/cbr_rar5_converter/ui/preferences.py:56
 msgid ""
-"Hay una conversión en marcha: espera a que termine para cambiar el idioma."
-msgstr "A conversion is in progress: wait for it to finish before changing the language."
+"Hay una conversión en marcha: espera a que termine para cambiar el idioma o "
+"el tema."
+msgstr ""
+"A conversion is in progress: wait for it to finish before changing the "
+"language or the theme."

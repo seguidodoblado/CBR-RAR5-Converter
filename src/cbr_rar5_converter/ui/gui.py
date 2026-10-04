@@ -2,13 +2,14 @@
 from pathlib import Path
 from threading import Thread
 
-from .. import __version__
+from .. import __version__, settings
 from ..conversion import ConversionService
 from ..detector import detect_rar_format
 from ..discovery import find_cbr_files
 from ..i18n import _
 from ..models import ConversionStatus
 from ..planning import plan_conversion
+from .theming import icon_choice, is_dark_theme, theme_variant
 
 AUTHOR = "Jose Antonio Seguido Doblado"
 AUTHOR_EMAIL = "jose.antonio.seguido@gmail.com"
@@ -25,13 +26,28 @@ def run_gui() -> None:
     try:
         import gi
         gi.require_version("Gtk", "4.0")
-        from gi.repository import Gdk, Gio, Gtk
+        from gi.repository import Gdk, Gtk
     except (ImportError, ValueError) as error:
         raise RuntimeError(_("GTK 4/PyGObject no está instalado.")) from error
 
     css = Gtk.CssProvider()
     css.load_from_data(b"progressbar trough { min-height: 28px; } progressbar progress { min-height: 28px; }")
     Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), css, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
+
+    theme_state = {"dark": False, "system": ""}   # modo en uso y tema GTK que tenía el sistema al arrancar
+
+    def pick_icon(*names: str) -> str:
+        """El primer icono de la lista que exista en el tema del usuario ('' si ninguno): simbólico en el modo oscuro y
+        de color en el claro (ver theming.icon_choice)."""
+        theme = Gtk.IconTheme.get_for_display(Gdk.Display.get_default())
+        return icon_choice(names, theme_state["dark"], theme.has_icon)
+
+    def icon_button(icons: tuple[str, ...], text: str, **properties):
+        """Botón con un icono del tema y su texto."""
+        content = Gtk.Box(spacing=6)
+        content.append(Gtk.Image(icon_name=pick_icon(*icons)))
+        content.append(Gtk.Label(label=text))
+        return Gtk.Button(child=content, **properties)
 
     class Window(Gtk.ApplicationWindow):
         def __init__(self, app):
@@ -46,10 +62,10 @@ def run_gui() -> None:
             self.set_titlebar(header)
             box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10, margin_top=12, margin_bottom=12, margin_start=12, margin_end=12)
             controls = Gtk.Box(spacing=8)
-            self.add_files_button = Gtk.Button(label=_("Añadir archivos"))
-            self.add_folder_button = Gtk.Button(label=_("Añadir carpeta"))
+            self.add_files_button = icon_button(("document-open",), _("Añadir archivos"))
+            self.add_folder_button = icon_button(("folder-open",), _("Añadir carpeta"))
             self.recursive = Gtk.CheckButton(label=_("Buscar subcarpetas"))
-            self.start_button = Gtk.Button(label=_("Preparar / iniciar"))
+            self.start_button = icon_button(("media-playback-start",), _("Preparar / iniciar"))
             for widget in (self.add_files_button, self.add_folder_button, self.recursive, self.start_button): controls.append(widget)
             self.info = Gtk.Label(label=_("Añade uno o varios archivos CBR, o una carpeta completa."), xalign=0)
             self.file_progress = Gtk.ProgressBar(show_text=True)
@@ -79,18 +95,14 @@ def run_gui() -> None:
             self.start_button.connect("clicked", self._prepare)
 
         def _build_menu_button(self):
-            # Botones con icono del sistema (simbólico, con el normal como alternativa) y etiqueta
+            # Botones con icono del sistema (simbólico en el tema oscuro, de color en el claro) y etiqueta
             popover = Gtk.Popover()
             box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=2, margin_start=6, margin_end=6,
                           margin_top=6, margin_bottom=6)
-            entries = ((_("Preferencias"), ("preferences-system-symbolic", "preferences-system"), self._open_preferences),
-                       (_("Acerca de CBR RAR5 Converter"), ("help-about-symbolic", "help-about"), self._open_about))
+            entries = ((_("Preferencias"), ("preferences-system",), self._open_preferences),
+                       (_("Acerca de CBR RAR5 Converter"), ("help-about",), self._open_about))
             for label, icon_names, callback in entries:
-                item = Gtk.Button(halign=Gtk.Align.FILL)
-                content = Gtk.Box(spacing=8)
-                content.append(Gtk.Image.new_from_gicon(Gio.ThemedIcon.new_from_names(list(icon_names))))
-                content.append(Gtk.Label(label=label, xalign=0))
-                item.set_child(content)
+                item = icon_button(icon_names, label, halign=Gtk.Align.FILL)
                 item.connect("clicked", lambda _b, fn=callback: (popover.popdown(), fn()))
                 box.append(item)
             popover.set_child(box)
@@ -196,5 +208,17 @@ def run_gui() -> None:
             self.info.set_text(message + suffix + ".")
 
     class App(Gtk.Application):
-        def do_activate(self): Window(self).present()
+        def do_activate(self):
+            windows = self.get_windows()
+            if windows:   # segunda activación: se reutiliza la ventana
+                windows[0].present()
+                return
+            gtk_settings = Gtk.Settings.get_default()
+            theme_state["system"] = gtk_settings.get_property("gtk-theme-name")
+            chosen = settings.dark_mode()
+            theme_state["dark"] = is_dark_theme(theme_state["system"]) if chosen is None else chosen
+            if chosen is not None:   # antes de presentar la ventana: en caliente Cinnamon no repinta
+                gtk_settings.set_property("gtk-theme-name", theme_variant(theme_state["system"], chosen))
+            Window(self).present()
+
     App(application_id="com.example.CbrRar5Converter").run(None)

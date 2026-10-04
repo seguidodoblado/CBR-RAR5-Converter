@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Añadido
+- **Tema Sistema / Claro / Oscuro** en Preferencias, además del idioma (se guarda en `settings.json` y se aplica reiniciando la aplicación). «Oscuro» y «Claro» eligen el tema GTK hermano del que tenga el sistema, conservando el acento (`Mint-Y-Aqua` ↔ `Mint-Y-Dark-Aqua`)
+- **Iconos del sistema** en los botones (Añadir archivos, Añadir carpeta, Preparar / iniciar) y en el menú de la cabecera: simbólicos en el tema oscuro y de color en el claro, con alternativa si el tema de iconos no tiene uno
+
 ## [0.2.0] - 2026-10-05
 
 ### Añadido
