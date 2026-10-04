@@ -1,3 +1,11 @@
+cbr-rar5-converter (0.2.1-1) noble; urgency=medium
+
+  * Add a Light/Dark/System theme selector in Preferences and system
+    icons on the buttons and the header menu; add the English text to
+    CODE_OF_CONDUCT.
+
+ -- Jose Antonio Seguido Doblado <jose.antonio.seguido@gmail.com>  Mon, 05 Oct 2026 01:28:16 +0200
+
 cbr-rar5-converter (0.2.0-1) noble; urgency=medium
 
   * Interfaz en español e inglés con selector de idioma, menú de
