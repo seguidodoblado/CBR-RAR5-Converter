@@ -7,16 +7,16 @@
 <h1 align="center">CBR RAR5 Converter</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/seguidodoblado/CBR-RAR5-Converter" alt="release">
-  <img src="https://github.com/seguidodoblado/CBR-RAR5-Converter/actions/workflows/ci.yml/badge.svg" alt="CI">
-  <img src="https://github.com/seguidodoblado/CBR-RAR5-Converter/actions/workflows/cd.yml/badge.svg" alt="CD">
+  <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/releases"><img src="https://img.shields.io/github/v/release/seguidodoblado/CBR-RAR5-Converter" alt="release"></a>
+  <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/actions/workflows/ci.yml"><img src="https://github.com/seguidodoblado/CBR-RAR5-Converter/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/actions/workflows/cd.yml"><img src="https://github.com/seguidodoblado/CBR-RAR5-Converter/actions/workflows/cd.yml/badge.svg" alt="CD"></a>
   <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/blob/main/LICENSE"><img src="https://img.shields.io/github/license/seguidodoblado/CBR-RAR5-Converter" alt="license"></a>
   <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/commits/main/"><img src="https://img.shields.io/github/last-commit/seguidodoblado/CBR-RAR5-Converter" alt="last commit"></a>
   <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/commits/main/"><img src="https://img.shields.io/github/commit-activity/t/seguidodoblado/CBR-RAR5-Converter" alt="total commits"></a>
-  <img src="https://img.shields.io/github/downloads/seguidodoblado/CBR-RAR5-Converter/total" alt="downloads">
-  <img src="https://img.shields.io/github/stars/seguidodoblado/CBR-RAR5-Converter?style=flat" alt="stars">
+  <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/releases"><img src="https://img.shields.io/github/downloads/seguidodoblado/CBR-RAR5-Converter/total" alt="downloads"></a>
+  <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/stargazers"><img src="https://img.shields.io/github/stars/seguidodoblado/CBR-RAR5-Converter?style=flat" alt="stars"></a>
   <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/issues"><img src="https://img.shields.io/github/issues/seguidodoblado/CBR-RAR5-Converter" alt="issues"></a>
-  <img src="https://img.shields.io/github/languages/top/seguidodoblado/CBR-RAR5-Converter" alt="language">
+  <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter"><img src="https://img.shields.io/github/languages/top/seguidodoblado/CBR-RAR5-Converter" alt="language"></a>
 </p>
 
 <p align="center">
