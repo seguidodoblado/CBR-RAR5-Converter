@@ -1,0 +1,201 @@
+# English translations for cbr-rar5-converter package.
+# Copyright (C) 2026 Jose Antonio Seguido Doblado
+# This file is distributed under the same license as the cbr-rar5-converter package.
+# Jose Antonio Seguido Doblado <jose.antonio.seguido@gmail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cbr-rar5-converter 0.1.4\n"
+"Report-Msgid-Bugs-To: jose.antonio.seguido@gmail.com\n"
+"POT-Creation-Date: 2026-10-05 01:00+0200\n"
+"PO-Revision-Date: 2026-10-05 01:00+0200\n"
+"Last-Translator: José Antonio Seguido Doblado <jose.antonio.seguido@gmail.com>\n"
+"Language-Team: none\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/cbr_rar5_converter/conversion.py:45
+msgid "Conversión cancelada."
+msgstr "Conversion cancelled."
+
+#: src/cbr_rar5_converter/conversion.py:47
+#, python-brace-format
+msgid "rar no pudo procesar el archivo: {detail}"
+msgstr "rar could not process the file: {detail}"
+
+#: src/cbr_rar5_converter/conversion.py:60
+msgid "No es RAR4."
+msgstr "It is not RAR4."
+
+#: src/cbr_rar5_converter/conversion.py:64
+msgid "No se encontró el comando 'rar'."
+msgstr "The 'rar' command was not found."
+
+#: src/cbr_rar5_converter/conversion.py:67
+msgid "El destino ya existe."
+msgstr "The destination already exists."
+
+#: src/cbr_rar5_converter/conversion.py:76
+msgid "El resultado no tiene cabecera RAR5 válida."
+msgstr "The result does not have a valid RAR5 header."
+
+#: src/cbr_rar5_converter/models.py:16
+msgid "Desconocido"
+msgstr "Unknown"
+
+#: src/cbr_rar5_converter/models.py:30
+msgid "Detectado"
+msgstr "Detected"
+
+#: src/cbr_rar5_converter/models.py:31
+msgid "Preparado"
+msgstr "Ready"
+
+#: src/cbr_rar5_converter/models.py:32
+msgid "Omitido"
+msgstr "Skipped"
+
+#: src/cbr_rar5_converter/models.py:33
+msgid "Convirtiendo"
+msgstr "Converting"
+
+#: src/cbr_rar5_converter/models.py:34
+msgid "Completado"
+msgstr "Completed"
+
+#: src/cbr_rar5_converter/models.py:35
+msgid "Error"
+msgstr "Error"
+
+#: src/cbr_rar5_converter/planning.py:13
+msgid "Solo se convierten archivos RAR4."
+msgstr "Only RAR4 files are converted."
+
+#: src/cbr_rar5_converter/ui/gui.py:20
+#, python-brace-format
+msgid ""
+"Archivo: {path} | Formato: {format} | Estado: {status} | Destino: "
+"{destination}"
+msgstr "File: {path} | Format: {format} | Status: {status} | Destination: {destination}"
+
+#: src/cbr_rar5_converter/ui/gui.py:30
+msgid "GTK 4/PyGObject no está instalado."
+msgstr "GTK 4/PyGObject is not installed."
+
+#: src/cbr_rar5_converter/ui/gui.py:49
+msgid "Añadir archivos"
+msgstr "Add files"
+
+#: src/cbr_rar5_converter/ui/gui.py:50
+msgid "Añadir carpeta"
+msgstr "Add folder"
+
+#: src/cbr_rar5_converter/ui/gui.py:51
+msgid "Buscar subcarpetas"
+msgstr "Search subfolders"
+
+#: src/cbr_rar5_converter/ui/gui.py:52
+msgid "Preparar / iniciar"
+msgstr "Prepare / start"
+
+#: src/cbr_rar5_converter/ui/gui.py:54
+msgid "Añade uno o varios archivos CBR, o una carpeta completa."
+msgstr "Add one or more CBR files, or a whole folder."
+
+#: src/cbr_rar5_converter/ui/gui.py:60
+msgid "Archivo actual"
+msgstr "Current file"
+
+#: src/cbr_rar5_converter/ui/gui.py:61
+msgid "Progreso del lote"
+msgstr "Batch progress"
+
+#: src/cbr_rar5_converter/ui/gui.py:86
+#: src/cbr_rar5_converter/ui/preferences.py:25
+msgid "Preferencias"
+msgstr "Preferences"
+
+#: src/cbr_rar5_converter/ui/gui.py:87
+msgid "Acerca de CBR RAR5 Converter"
+msgstr "About CBR RAR5 Converter"
+
+#: src/cbr_rar5_converter/ui/gui.py:97
+msgid "Menú principal"
+msgstr "Main menu"
+
+#: src/cbr_rar5_converter/ui/gui.py:109
+msgid ""
+"Convierte de forma segura archivos CBR en formato RAR4 al formato RAR5, sin "
+"modificar los originales."
+msgstr "Safely converts CBR files in RAR4 format to RAR5, without modifying the originals."
+
+#: src/cbr_rar5_converter/ui/gui.py:113
+msgid "translator-credits"
+msgstr "José Antonio Seguido Doblado <jose.antonio.seguido@gmail.com>"
+
+#: src/cbr_rar5_converter/ui/gui.py:118
+msgid "Seleccionar archivos CBR"
+msgstr "Select CBR files"
+
+#: src/cbr_rar5_converter/ui/gui.py:128 src/cbr_rar5_converter/ui/gui.py:138
+#, python-brace-format
+msgid "Selección cancelada o fallida: {error}"
+msgstr "Selection cancelled or failed: {error}"
+
+#: src/cbr_rar5_converter/ui/gui.py:155
+msgid "No hay archivos RAR4 preparados para convertir."
+msgstr "There are no RAR4 files ready to convert."
+
+#: src/cbr_rar5_converter/ui/gui.py:158
+#, python-brace-format
+msgid "Iniciando lote de {count} archivo(s)…"
+msgstr "Starting a batch of {count} file(s)…"
+
+#: src/cbr_rar5_converter/ui/gui.py:168
+#, python-brace-format
+msgid "Archivo {index}/{total}: {value}%"
+msgstr "File {index}/{total}: {value}%"
+
+#: src/cbr_rar5_converter/ui/gui.py:184
+msgid "Lote finalizado."
+msgstr "Batch finished."
+
+#: src/cbr_rar5_converter/ui/gui.py:191
+#, python-brace-format
+msgid "; {added} añadido(s) en esta selección"
+msgstr "; {added} added in this selection"
+
+#: src/cbr_rar5_converter/ui/gui.py:192
+#, python-brace-format
+msgid ""
+"{total} archivo(s) en la lista: {ready} preparado(s), {skipped} omitido(s)"
+msgstr "{total} file(s) in the list: {ready} ready, {skipped} skipped"
+
+#: src/cbr_rar5_converter/ui/gui.py:195
+#, python-brace-format
+msgid ", {errors} con error"
+msgstr ", {errors} with errors"
+
+#: src/cbr_rar5_converter/ui/preferences.py:18
+msgid "Sistema"
+msgstr "System"
+
+#: src/cbr_rar5_converter/ui/preferences.py:32
+msgid "Idioma"
+msgstr "Language"
+
+#: src/cbr_rar5_converter/ui/preferences.py:38
+msgid "Los cambios se aplican reiniciando la aplicación."
+msgstr "Changes are applied by restarting the application."
+
+#: src/cbr_rar5_converter/ui/preferences.py:42
+msgid "Aplicar y reiniciar"
+msgstr "Apply and restart"
+
+#: src/cbr_rar5_converter/ui/preferences.py:49
+msgid ""
+"Hay una conversión en marcha: espera a que termine para cambiar el idioma."
+msgstr "A conversion is in progress: wait for it to finish before changing the language."

@@ -1,6 +1,7 @@
 from collections.abc import Iterable
 from pathlib import Path
 
+
 def find_cbr_files(roots: Iterable[Path], recursive: bool = False) -> list[Path]:
     found: set[Path] = set()
     for root in roots:

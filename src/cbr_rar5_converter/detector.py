@@ -1,4 +1,5 @@
 from pathlib import Path
+
 from .models import RarFormat
 
 RAR4_SIGNATURE = b"Rar!\x1a\x07\x00"

@@ -3,10 +3,12 @@ import re
 import shutil
 import subprocess
 import tempfile
-from threading import Event
 from collections.abc import Callable
 from pathlib import Path
+from threading import Event
+
 from .detector import detect_rar_format
+from .i18n import _
 from .models import ConversionItem, ConversionStatus, RarFormat
 
 ProgressCallback = Callable[[int], None]
@@ -40,9 +42,9 @@ class RarConverter:
                 self.progress(min(100, int(match.group(1))))
             if self.cancel.is_set():
                 process.terminate()
-                raise RuntimeError("Conversión cancelada.")
+                raise RuntimeError(_("Conversión cancelada."))
         if process.wait() != 0:
-            raise RuntimeError("rar no pudo procesar el archivo: " + "".join(output).strip())
+            raise RuntimeError(_("rar no pudo procesar el archivo: {detail}").format(detail="".join(output).strip()))
 
 
 class ConversionService:
@@ -55,14 +57,14 @@ class ConversionService:
 
     def convert(self, item: ConversionItem) -> ConversionItem:
         if item.format != RarFormat.RAR4:
-            item.status, item.message = ConversionStatus.SKIPPED, "No es RAR4."
+            item.status, item.message = ConversionStatus.SKIPPED, _("No es RAR4.")
             return item
         converter = self.converter or RarConverter(progress=self.progress, cancel=self.cancel)
         if self.converter is None and not rar_available():
-            item.status, item.message = ConversionStatus.FAILED, "No se encontró el comando 'rar'."
+            item.status, item.message = ConversionStatus.FAILED, _("No se encontró el comando 'rar'.")
             return item
         if item.destination.exists():
-            item.status, item.message = ConversionStatus.FAILED, "El destino ya existe."
+            item.status, item.message = ConversionStatus.FAILED, _("El destino ya existe.")
             return item
         item.status = ConversionStatus.CONVERTING
         item.destination.parent.mkdir(parents=True, exist_ok=True)
@@ -71,7 +73,7 @@ class ConversionService:
                 temporary = Path(temp_dir) / item.destination.name
                 converter(item.source, temporary)
                 if detect_rar_format(temporary) != RarFormat.RAR5:
-                    raise ValueError("El resultado no tiene cabecera RAR5 válida.")
+                    raise ValueError(_("El resultado no tiene cabecera RAR5 válida."))
                 fd = os.open(item.destination.parent, os.O_RDONLY)
                 try:
                     os.replace(temporary, item.destination)

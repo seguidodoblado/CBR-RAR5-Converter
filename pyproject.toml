@@ -9,9 +9,16 @@ description = "Conversión segura de cómics CBR RAR4 a RAR5"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
+[project.optional-dependencies]
+gui = ["PyGObject>=3.42"]
+dev = ["pytest>=7", "ruff>=0.6"]
 [project.scripts]
 cbr-rar5-converter = "cbr_rar5_converter.__main__:main"
 [tool.setuptools.packages.find]
-include = ["cbr_rar5_converter*"]
+where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["src"]
+[tool.ruff]
+line-length = 100
+target-version = "py310"

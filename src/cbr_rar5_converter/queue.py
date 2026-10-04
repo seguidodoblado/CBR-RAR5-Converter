@@ -1,6 +1,8 @@
 from collections.abc import Iterable
+
 from .conversion import ConversionService
 from .models import ConversionItem
+
 
 class ConversionQueue:
     def __init__(self, service: ConversionService):
