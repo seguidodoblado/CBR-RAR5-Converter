@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+### Añadido
+- **Interfaz en español e inglés** (`gettext`): el español es el idioma fuente y el inglés está en `po/en.po`. Se elige en el nuevo menú de la cabecera → **Preferencias** (Sistema, Español o English; reinicia la aplicación). Con «Sistema» se usa el idioma del escritorio o `$LANGUAGE`
+- Menú de la cabecera con **Preferencias** y **Acerca de** (ventana estándar de GNOME: licencia GPL-3.0 predefinida de GTK, autor con enlace al correo y créditos de traducción)
+- `ruff` y más pruebas (de 3 a 28): conversión, cola, progreso y cancelación de `rar`, ajustes, traducciones
+- Integración continua (`ci.yml`: ruff, pytest y `.deb` con lintian) y despliegue (`cd.yml`: al subir una etiqueta `vX.Y.Z` ejecuta el CI y, solo si pasa, deja la release en borrador con el mismo `.deb` que construyó el CI)
+- `PRIVACY.md` y `PRIVACY.en.md` (política de privacidad), y versión en inglés de `CONTRIBUTING`, `SECURITY` y `SUPPORT`, con selector de idioma
+
+### Cambiado
+- El código pasa a `src/cbr_rar5_converter/`, con la interfaz en su propio paquete `ui/`
+- Empaquetado conforme a Debian: la aplicación se instala en `/usr/share/cbr-rar5-converter` (antes en `/opt/cbr-rar5-converter`), con `copyright`, `changelog.Debian.gz`, páginas de manual en inglés y español y `md5sums`; el `.deb` pasa lintian sin errores. La versión del paquete sale ahora de `debian/changelog` (`0.1.4-1`)
+- Los estados y formatos se comparan por su valor estable y no por su texto, para no depender del idioma
+- El progreso de cada archivo del lote deja de depender de la variable del bucle (aviso B023 de `ruff`); el comportamiento no cambia
+- Los badges del README se ordenan según el estándar de los demás proyectos y se corrige el cierre de su bloque HTML
+
 ## [0.1.4] - 2026-10-01
 
 ### Añadido

@@ -6,7 +6,18 @@
 
 <h1 align="center">CBR RAR5 Converter</h1>
 
-![release](https://img.shields.io/github/v/release/seguidodoblado/CBR-RAR5-Converter) ![license](https://img.shields.io/github/license/seguidodoblado/CBR-RAR5-Converter) ![last commit](https://img.shields.io/github/last-commit/seguidodoblado/CBR-RAR5-Converter) ![downloads](https://img.shields.io/github/downloads/seguidodoblado/CBR-RAR5-Converter/total) ![stars](https://img.shields.io/github/stars/seguidodoblado/CBR-RAR5-Converter?style=flat) ![issues](https://img.shields.io/github/issues/seguidodoblado/CBR-RAR5-Converter) ![language](https://img.shields.io/github/languages/top/seguidodoblado/CBR-RAR5-Converter)
+<p align="center">
+  <img src="https://img.shields.io/github/v/release/seguidodoblado/CBR-RAR5-Converter" alt="release">
+  <img src="https://github.com/seguidodoblado/CBR-RAR5-Converter/actions/workflows/ci.yml/badge.svg" alt="CI">
+  <img src="https://github.com/seguidodoblado/CBR-RAR5-Converter/actions/workflows/cd.yml/badge.svg" alt="CD">
+  <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/blob/main/LICENSE"><img src="https://img.shields.io/github/license/seguidodoblado/CBR-RAR5-Converter" alt="license"></a>
+  <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/commits/main/"><img src="https://img.shields.io/github/last-commit/seguidodoblado/CBR-RAR5-Converter" alt="last commit"></a>
+  <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/commits/main/"><img src="https://img.shields.io/github/commit-activity/t/seguidodoblado/CBR-RAR5-Converter" alt="total commits"></a>
+  <img src="https://img.shields.io/github/downloads/seguidodoblado/CBR-RAR5-Converter/total" alt="downloads">
+  <img src="https://img.shields.io/github/stars/seguidodoblado/CBR-RAR5-Converter?style=flat" alt="stars">
+  <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/issues"><img src="https://img.shields.io/github/issues/seguidodoblado/CBR-RAR5-Converter" alt="issues"></a>
+  <img src="https://img.shields.io/github/languages/top/seguidodoblado/CBR-RAR5-Converter" alt="language">
+</p>
 
 <p align="center">
   Safely converts <code>.cbr</code> files in RAR4 format to RAR5, without modifying the originals.
@@ -16,7 +27,7 @@
   <img src="docs/screenshot.png" alt="CBR RAR5 Converter screenshot">
 </p>
 
-Desktop application (GTK 4 + PyGObject, Spanish-language interface), for personal use: no server, no account,
+Desktop application (GTK 4 + PyGObject, interface in Spanish and English), for personal use: no server, no account,
 everything happens on your own machine.
 
 - **Detects** the format of each `.cbr` from its header, not from its extension.
@@ -30,6 +41,10 @@ everything happens on your own machine.
 
 Full documentation —installation, usage guide, technical specifications, troubleshooting and more— is on the
 **[project wiki](https://github.com/seguidodoblado/CBR-RAR5-Converter/wiki)** (Spanish and English).
+
+## Privacy
+
+CBR RAR5 Converter has no server or account of its own, does not connect to the Internet and does not collect data. What is stored and where is in the **[privacy policy](PRIVACY.en.md)**.
 
 ## License
 
