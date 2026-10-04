@@ -1,0 +1,32 @@
+.TH CBR\-RAR5\-CONVERTER 1 "" "cbr-rar5-converter @VERSION@"
+.SH NOMBRE
+cbr\-rar5\-converter \- convierte de forma segura cómics CBR de RAR4 a RAR5
+.SH SINOPSIS
+.B cbr\-rar5\-converter
+.SH DESCRIPCIÓN
+.B cbr\-rar5\-converter
+es una aplicación GTK que detecta el formato de los archivos
+.I .cbr
+por su cabecera, no por su extensión, y convierte los que son RAR4 a RAR5 sin modificar los
+originales. Los archivos convertidos se escriben en una carpeta
+.I Corregido
+junto a los originales, a través de un archivo temporal que se comprueba antes de sustituir el
+destino.
+.PP
+Abre la interfaz gráfica. Los archivos y carpetas se añaden desde la ventana. Para convertir hace
+falta el comando
+.BR rar (1).
+.SH ARCHIVOS
+.TP
+.I ~/.config/cbr\-rar5\-converter/settings.json
+Ajustes del usuario (idioma de la interfaz).
+.SH ENTORNO
+.TP
+.B LANGUAGE
+Idioma de la interfaz cuando está en «Sistema» en las preferencias.
+.SH VÉASE TAMBIÉN
+.BR rar (1)
+.PP
+Página del proyecto: https://github.com/seguidodoblado/CBR\-RAR5\-Converter
+.SH AUTOR
+Jose Antonio Seguido Doblado <jose.antonio.seguido@gmail.com>

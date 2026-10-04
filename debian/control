@@ -1,13 +1,15 @@
 Source: cbr-rar5-converter
 Section: graphics
 Priority: optional
-Maintainer: CBR RAR5 Converter <localhost>
+Maintainer: Jose Antonio Seguido Doblado <jose.antonio.seguido@gmail.com>
 Standards-Version: 4.6.0
-Build-Depends: debhelper-compat (= 13)
+Build-Depends: debhelper-compat (= 13), gettext
 
 Package: cbr-rar5-converter
 Architecture: all
 Depends: ${misc:Depends}, python3, python3-gi, gir1.2-gtk-4.0
 Recommends: rar
+Homepage: https://github.com/seguidodoblado/CBR-RAR5-Converter
 Description: Conversor seguro de archivos CBR RAR4 a RAR5
- Aplicación GTK para detectar y convertir archivos RAR4 a RAR5 sin modificar los originales.
+ Aplicación GTK para detectar y convertir archivos RAR4 a RAR5 sin
+ modificar los originales.
