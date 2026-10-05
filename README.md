@@ -10,7 +10,7 @@
   <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/releases"><img src="https://img.shields.io/github/v/release/seguidodoblado/CBR-RAR5-Converter" alt="release"></a>
   <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/actions/workflows/ci.yml"><img src="https://github.com/seguidodoblado/CBR-RAR5-Converter/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/actions/workflows/cd.yml"><img src="https://github.com/seguidodoblado/CBR-RAR5-Converter/actions/workflows/cd.yml/badge.svg" alt="CD"></a>
-  <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/blob/main/LICENSE"><img src="https://img.shields.io/github/license/seguidodoblado/CBR-RAR5-Converter" alt="license"></a>
+  <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/blob/main/COPYING"><img src="https://img.shields.io/github/license/seguidodoblado/CBR-RAR5-Converter" alt="license"></a>
   <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/commits/main/"><img src="https://img.shields.io/github/last-commit/seguidodoblado/CBR-RAR5-Converter" alt="last commit"></a>
   <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/commits/main/"><img src="https://img.shields.io/github/commit-activity/t/seguidodoblado/CBR-RAR5-Converter" alt="total commits"></a>
   <a href="https://github.com/seguidodoblado/CBR-RAR5-Converter/releases"><img src="https://img.shields.io/github/downloads/seguidodoblado/CBR-RAR5-Converter/total" alt="downloads"></a>
@@ -52,4 +52,4 @@ CBR RAR5 Converter no tiene servidor ni cuenta propios, no se conecta a Internet
 
 ## Licencia
 
-Este proyecto se distribuye bajo la GNU General Public License, versión 3 o posterior (ver `LICENSE`).
+Este proyecto se distribuye bajo la GNU General Public License, versión 3 o posterior (ver `COPYING`).
