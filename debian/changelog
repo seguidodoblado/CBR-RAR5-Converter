@@ -1,3 +1,11 @@
+cbr-rar5-converter (0.2.2-1) noble; urgency=medium
+
+  * Use a real application ID
+    (io.github.seguidodoblado.CbrRar5Converter) instead of the example
+    one; link every README badge to its destination.
+
+ -- Jose Antonio Seguido Doblado <jose.antonio.seguido@gmail.com>  Mon, 05 Oct 2026 02:21:02 +0200
+
 cbr-rar5-converter (0.2.1-1) noble; urgency=medium
 
   * Add a Light/Dark/System theme selector in Preferences and system

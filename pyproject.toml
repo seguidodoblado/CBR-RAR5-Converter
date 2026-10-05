@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cbr-rar5-converter"
-version = "0.2.1"
+version = "0.2.2"
 description = "Conversión segura de cómics CBR RAR4 a RAR5"
 readme = "README.md"
 license = "GPL-3.0-or-later"
