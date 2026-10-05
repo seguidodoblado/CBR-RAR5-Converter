@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Cambiado
+- El identificador de la aplicación (`Gtk.Application`) pasa de `com.example.CbrRar5Converter`, un valor de ejemplo, a `io.github.seguidodoblado.CbrRar5Converter`, un identificador real con la forma que exige Flathub; no cambia ningún dato guardado
+
 ## [0.2.1] - 2026-10-05
 
 ### Añadido

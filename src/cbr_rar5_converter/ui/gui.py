@@ -221,4 +221,4 @@ def run_gui() -> None:
                 gtk_settings.set_property("gtk-theme-name", theme_variant(theme_state["system"], chosen))
             Window(self).present()
 
-    App(application_id="com.example.CbrRar5Converter").run(None)
+    App(application_id="io.github.seguidodoblado.CbrRar5Converter").run(None)
