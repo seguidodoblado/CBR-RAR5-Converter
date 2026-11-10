@@ -1,5 +1,3 @@
-<p align="right"><a href="README.en.md">🇺🇸 English</a></p>
-
 <p align="center">
   <img src="cbr-rar5-converter.svg" alt="Logotipo de CBR RAR5 Converter" width="128">
 </p>
@@ -20,6 +18,8 @@
   <a href="https://codetime.dev"><img alt="CodeTime Badge" src="https://shields.jannchie.com/endpoint?style=flat&color=0284c7&url=https%3A%2F%2Fcodetime.dev%2Fv3%2Fusers%2Fshield%3Fuid%3D36830"></a>
   <a href="https://wakatime.com/badge/github/seguidodoblado/CBR-RAR5-Converter"><img src="https://wakatime.com/badge/github/seguidodoblado/CBR-RAR5-Converter.svg" alt="wakatime"></a>
 </p>
+
+## 🇪🇸 Español
 
 <p align="center">
   Convierte de forma segura archivos <code>.cbr</code> en formato RAR4 al formato RAR5, sin modificar los
@@ -53,3 +53,38 @@ CBR RAR5 Converter no tiene servidor ni cuenta propios, no se conecta a Internet
 ## Licencia
 
 Este proyecto se distribuye bajo la GNU General Public License, versión 3 o posterior (ver `COPYING`).
+
+---
+
+## 🇺🇸 English
+
+<p align="center">
+  Safely converts <code>.cbr</code> files in RAR4 format to RAR5, without modifying the originals.
+</p>
+
+<p align="center">
+  <img src="docs/screenshot.png" alt="CBR RAR5 Converter screenshot">
+</p>
+
+Desktop application (GTK 4 + PyGObject, interface in Spanish and English), for personal use: no server, no account,
+everything happens on your own machine.
+
+- **Detects** the format of each `.cbr` from its header, not from its extension.
+- **Searches** individual files or whole folders, optionally walking through subfolders.
+- **Converts** safely: temporary file, RAR5 header validation and atomic replacement, never overwriting existing
+  destinations.
+- **Never modifies the originals**: the result is saved in a `Corregido` subfolder, preserving the relative path.
+- **Per-file and per-batch progress** when converting several comics at once.
+
+## Documentation
+
+Full documentation —installation, usage guide, technical specifications, troubleshooting and more— is on the
+**[project wiki](https://github.com/seguidodoblado/CBR-RAR5-Converter/wiki)** (Spanish and English).
+
+## Privacy
+
+CBR RAR5 Converter has no server or account of its own, does not connect to the Internet and does not collect data. What is stored and where is in the **[privacy policy](PRIVACY.md#-english)**.
+
+## License
+
+This project is distributed under the GNU General Public License, version 3 or later (see `COPYING`).
