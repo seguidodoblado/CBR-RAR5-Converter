@@ -21,7 +21,7 @@ cp -a "$base/src/cbr_rar5_converter" "$stage/usr/share/cbr-rar5-converter/"
 find "$stage/usr/share/cbr-rar5-converter" -type d -name __pycache__ -prune -exec rm -rf {} +
 cp "$base/debian/cbr-rar5-converter-launcher" "$stage/usr/bin/cbr-rar5-converter"
 cp "$base/debian/cbr-rar5-converter.desktop" "$stage/usr/share/applications/"
-cp "$base/cbr-rar5-converter.svg" "$stage/usr/share/icons/hicolor/scalable/apps/"
+cp "$base/src/cbr_rar5_converter/assets/cbr-rar5-converter.svg" "$stage/usr/share/icons/hicolor/scalable/apps/"
 cp "$base/debian/copyright" "$doc/copyright"
 gzip -9n -c "$base/debian/changelog" > "$doc/changelog.Debian.gz"
 # Páginas de manual (inglés en man1, español en es/man1); la versión se rellena aquí

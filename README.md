@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="cbr-rar5-converter.svg" alt="Logotipo de CBR RAR5 Converter" width="128">
+  <img src="src/cbr_rar5_converter/assets/cbr-rar5-converter.svg" alt="Logotipo de CBR RAR5 Converter" width="128">
 </p>
 
 <h1 align="center">CBR RAR5 Converter</h1>
